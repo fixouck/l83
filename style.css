@@ -1,0 +1,107 @@
+
+body {
+    font-family: 'Trebuchet MS', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Высота фонового изображения */
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Задает соотношение сторон 16:9 (высота / ширина) */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 24px;
+}
+
+.hero-text a {
+    display: block;
+    margin: 10px auto;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    background-color: #4c75a3; /* Цвет кнопок */
+    border-radius: 12px;
+    transition: background-color 0.2s;
+}
+
+.hero-text a:hover {
+    background-color: #3b5a82;
+}
+
+    .content {
+        background-color: #fff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .content p {
+        color: #666;
+        margin: 20px 0;
+    }
+
+
+.vk-link, .telegram-link {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: background-color 0.2s;
+    }
+
+    .vk-link {
+        background-color: #4c75a3;
+    }
+
+    .telegram-link {
+        background-color: #0088cc;
+    }
+
+    .vk-link:hover {
+        background-color: #3b5a82;
+    }
+
+    .telegram-link:hover {
+        background-color: #005580;
+    }
