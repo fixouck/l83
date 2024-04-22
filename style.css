@@ -107,14 +107,3 @@ footer {
         font-size: 16px;
     }
 }
-```
-
-### Key Enhancements:
-
-- **Font Usage:** Sticking with 'Trebuchet MS' and Arial for clean readability.
-- **Color Palette:** A soft background (`#f0f0f0`) with white content blocks for a fresh, open feel. Text colors are kept dark (`#333` and `#666`) for readability.
-- **Spacing and Layout:** Generous padding and margin create a breathable layout, emphasizing content.
-- **Interactive Elements:** Links have a uniform style with subtle hover effects to maintain minimalism while being interactive.
-- **Responsive Design:** A media query is included to adjust text sizes for smaller screens, ensuring good legibility across devices.
-
-This CSS update, paired with your HTML, will create a minimalist and modern web experience that's visually appealing and user-friendly.
