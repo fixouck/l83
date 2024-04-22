@@ -61,13 +61,31 @@ a {
 }
 
 .vk-link, .telegram-link {
-    background-color: #28a8e9; /* Unified color for links */
-}
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        color: #ffffff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 12px;
+        transition: background-color 0.2s;
+    }
 
-.vk-link:hover, .telegram-link:hover {
-    background-color: #005580;
-    color: #fff;
-}
+    .vk-link {
+        background-color: #0078ff;
+    }
+
+    .telegram-link {
+        background-color: #28a8e9;
+    }
+
+    .vk-link:hover {
+        background-color: #4c75a3;
+    }
+
+    .telegram-link:hover {
+        background-color: #005580;
+    }
 
 .content p {
     color: #666;
