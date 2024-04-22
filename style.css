@@ -62,8 +62,6 @@ a {
 }
 
 .vk-link, .telegram-link {
-        display: block;
-        text-align: center;
         color: #ffffff;
 
     }
