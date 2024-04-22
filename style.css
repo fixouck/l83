@@ -71,20 +71,20 @@ a {
         transition: background-color 0.2s;
     }
 
-    .vk-link {
-        background-color: #0078ff;
-    }
+.vk-link, .telegram-link {
+    color: #ffffff;
+}
 
-    .telegram-link {
-        background-color: #28a8e9;
-    }
+.vk-link, .telegram-link {
+    background-color: #0078ff;
+}
 
-    .vk-link:hover {
-        background-color: #4c75a3;
-    }
+.vk-link:hover {
+    background-color: #4c75a3;
+}
 
-    .telegram-link:hover {
-        background-color: #005580;
+.telegram-link:hover {
+    background-color: #005580;
     }
 
 .content p {
