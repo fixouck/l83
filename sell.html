@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Фарм липтона</title>
+<style>
+    @font-face {
+        font-family: 'Overdoze Sans';
+        src: url('overdozesans.ttf') format('truetype');
+    }
+
+    body {
+        font-family: 'Overdoze Sans', Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+        position: relative;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #apple {
+        max-width: 100px; /* Уменьшаем изображение яблока до 100px */
+        height: auto;
+        position: relative;
+        transition: transform 0.1s ease-in-out;
+    }
+    #lipton {
+        max-width: 200px; /* Ширина изображения ограничена до 200px */
+        height: auto;
+        margin-top: 20px; /* Добавим немного отступа сверху */
+    }
+    #apple-container {
+        position: relative;
+    }
+    #apple-count {
+        margin-top: 10px;
+    }
+    #not-mobile-message {
+        display: none; /* По умолчанию скрываем сообщение */
+        color: red;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Шатание яблока</h2>
+    <div id="apple-container">
+        <img src="apple.png" id="apple" onclick="moveApple()">
+    </div>
+    <div id="apple-count">Количество яблок: <span id="count">0</span></div>
+    <div id="not-mobile-message">Этот сайт работает только на мобильных устройствах.</div>
+</div>
+
+<audio id="audio" src="tap.ogg"></audio>
+
+<script>
+    let appleCount = 0;
+
+    function incrementAppleCount() {
+        const countElement = document.getElementById('count');
+        countElement.textContent = ++appleCount;
+    }
+
+    function moveApple() {
+        const audio = document.getElementById('audio');
+        audio.play();
+
+        incrementAppleCount();
+
+        const apple = document.getElementById('apple');
+        const angle = Math.random() > 0.5 ? '10deg' : '-10deg';
+        apple.style.transform = `rotate(${angle})`;
+
+        setTimeout(() => {
+            apple.style.transform = 'rotate(0deg)';
+        }, 100);
+    }
+
+    // Добавим проверку на мобильное устройство
+    if (window.innerWidth >= 768) {
+        const notMobileMessage = document.getElementById('not-mobile-message');
+        notMobileMessage.style.display = 'block'; // Показываем сообщение
+        document.body.innerHTML = ''; // Очищаем содержимое body
+        document.body.appendChild(notMobileMessage); // Добавляем сообщение в body
+    }
+</script>
+</body>
+</html>
