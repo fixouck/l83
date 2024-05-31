@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Фарм липтона</title>
+<title>Шатание яблока</title>
 <style>
     @font-face {
         font-family: 'Overdoze Sans';
@@ -37,7 +37,7 @@
         cursor: pointer;
     }
     #apple {
-        max-width: 100px; /* Уменьшаем изображение яблока до 100px */
+        max-width: 50px; /* Уменьшаем изображение яблока до 50px */
         height: auto;
         position: relative;
         transition: transform 0.1s ease-in-out;
@@ -51,23 +51,26 @@
         position: relative;
     }
     #apple-count {
-        margin-top: 10px;
+        margin-top: 20px; /* Увеличиваем отступ перед текстом */
+        font-size: 24px; /* Увеличиваем размер текста */
     }
     #not-mobile-message {
         display: none; /* По умолчанию скрываем сообщение */
         color: red;
-        font-size: 18px;
+        font-size: 24px; /* Увеличиваем размер текста */
         margin-top: 20px;
+        background-color: white; /* Белый фон */
+        padding: 20px; /* Поля внутри сообщения */
     }
 </style>
 </head>
 <body>
 <div class="container">
-    <h2>Фарм липтона</h2>
+    <h2>Шатание яблока</h2>
     <div id="apple-container">
         <img src="apple.png" id="apple" onclick="moveApple()">
     </div>
-    <div id="apple-count">Вы нафармили уже: <span id="count">0</span></div>
+    <div id="apple-count">Количество яблок: <span id="count">0</span></div>
     <div id="not-mobile-message">Этот сайт работает только на мобильных устройствах.</div>
 </div>
 
@@ -84,7 +87,7 @@
     function moveApple() {
         const audio = document.getElementById('audio');
         audio.play();
-
+        
         incrementAppleCount();
 
         const apple = document.getElementById('apple');
